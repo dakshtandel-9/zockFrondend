@@ -16,13 +16,13 @@ function HeroSection() {
     const isMobile = useMediaQuery({ maxWidth: 768 });
 
     return (
-        <div style={{ background: "radial-gradient(circle, #296ceb, #2556d9)", paddingTop: "100px", height: "100vh", textAlign: "center" }}>
+        <div id='home' style={{ background: "radial-gradient(circle, #296ceb, #2556d9)", paddingTop: "100px", height: "100vh", textAlign: "center" }}>
             <div className='hero-container'>
                 <div className='left-part'>
                     <img className='floating-img' src="https://test.sknd.in/wp-content/uploads/2024/10/logo-footer.png" alt="Logo" />
                 </div>
                 <div className='right-part'>
-                    {isMobile ? (<h1 style={{ color: "white" }}>
+                    {isMobile ? (<h1 style={{ color: "white", textAlign: "left" }}>
                         An Agency That Specialises In <br />
                         <TypingEffect phrases={phrases} />
                     </h1>) : (<h1 style={{ fontSize: "3rem", color: "white" }}>

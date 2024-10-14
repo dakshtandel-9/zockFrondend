@@ -22,10 +22,10 @@ function Navbar() {
                     </div>
                     <div className={`menu-list ${menuOpen ? 'show' : ''}`}>
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/services">Services</a></li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/work">Our Work</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#work">Our Work</a></li>
                             <li><Button variant="contained">Contact</Button></li>
                         </ul>
                     </div>
@@ -36,10 +36,10 @@ function Navbar() {
                         <img src="https://test.sknd.in/wp-content/uploads/2024/10/OCK.png" alt="Logo" />
                     </div>
                     <div className="nav-link">
-                        <a href="/" className='ms-3 me-3'>Home</a>
-                        <a href="/services" className='ms-3 me-3'>Services</a>
-                        <a href="/about" className='ms-3 me-3'>About</a>
-                        <a href="/work" className='ms-3 me-3'>Our Work</a>
+                        <a href="#home" className='ms-3 me-3'>Home</a>
+                        <a href="#services" className='ms-3 me-3'>Services</a>
+                        <a href="#about" className='ms-3 me-3'>About</a>
+                        <a href="#work" className='ms-3 me-3'>Our Work</a>
                     </div>
                     <div className="contact-button">
                         <Button variant="outlined">Contact</Button>

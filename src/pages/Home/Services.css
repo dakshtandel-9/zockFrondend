@@ -1,0 +1,42 @@
+.services-section {
+    height: 100vh;
+}
+
+.service-boxes div {
+    width: 500px;
+    margin: 10px;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 5px 5px 15px rgba(59, 59, 59, 0.5)
+}
+
+.service-boxes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.service-boxes div {
+    transition: 1s ease;
+}
+
+.box-color {
+    background: radial-gradient(circle, #6a9eff, #2556d9);
+
+}
+
+
+.services-section-boxes {
+    display: flex;
+    gap: 200px;
+}
+
+.service-item div {
+    transition: margin 1s ease;
+    margin: 20px;
+}
+
+.service-item div:hover {
+    margin-left: 40px;
+}
