@@ -2,10 +2,22 @@
     height: 100vh;
 }
 
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Apply shadow */
+}
+
+.services-section div h1 {
+    font-size: 50px;
+    padding-top: 100px;
+    margin: 50px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
 .service-boxes div {
     width: 500px;
-    margin: 10px;
-    padding: 20px;
+    margin: 20px;
+    padding: 30px;
     font-weight: 700;
     font-size: 15px;
     box-shadow: 5px 5px 15px rgba(59, 59, 59, 0.5)
@@ -39,4 +51,45 @@
 
 .service-item div:hover {
     margin-left: 40px;
+}
+
+
+
+.hover-image {
+    transition: transform 0.3s ease;
+    width: 150px;
+    /* Smooth transition */
+}
+
+.hover-image:hover {
+    transform: translateX(10px);
+    /* Move right by 10 pixels */
+}
+
+@media (max-width: 1200px) {
+    .hover-image {
+        display: none;
+    }
+
+    .dis-none {
+        display: none;
+    }
+}
+
+.service-item {
+    transition: 1s ease;
+    /* Applies a smooth transition effect to transform */
+}
+
+.service-item:hover {
+    transform: scale(1.1);
+    /* Example transform - it will scale the element when hovered */
+}
+
+.service-boxes {
+    display: flex;
+}
+
+.service-boxes div {
+    justify-content: center;
 }

@@ -34,8 +34,8 @@ function HeroSection() {
             </div >
             <Button variant="contained" style={{ backgroundColor: "#ff3a47", width: "200px", borderRadius: "20px", height: "50px" }}>Hire Us</Button>
             <div>
-                <img src="https://test.sknd.in/wp-content/uploads/2024/10/2-1.png" alt="" className='bg-img hover-image floating-img ' />
-                <img src="https://test.sknd.in/wp-content/uploads/2024/10/1-1.png" alt="" className='bg-img-2 hover-image-2 floating-img' />
+                <img src="https://test.sknd.in/wp-content/uploads/2024/10/2-1.png" alt="" className='bg-img hover-image ' />
+                <img src="https://test.sknd.in/wp-content/uploads/2024/10/1-1.png" alt="" className='bg-img-2 hover-image-2' />
             </div>
         </div>
     );
