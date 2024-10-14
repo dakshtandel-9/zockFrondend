@@ -1,128 +1,98 @@
+* {
+    box-sizing: border-box;
+    /* Apply box-sizing to all elements */
+    margin: 0;
+    /* Reset margin */
+    padding: 0;
+    /* Reset padding */
+}
+
+body {
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
 .hero-container {
-    height: 100vh;
-    background: radial-gradient(circle, #296ceb, #2556d9);
     display: flex;
-    padding: 10%;
+    flex-direction: column;
+    /* Stack elements vertically on mobile */
+    align-items: center;
+    /* Center align items */
+    justify-content: center;
+    /* Center content vertically */
+    text-align: center;
+    /* Center text */
+    padding: 20px;
+    /* Add padding */
+    width: 100vw;
+    /* Ensure full width of the viewport */
+    overflow: hidden;
+    /* Prevent overflow */
 }
 
 .left-part {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30vw;
+    width: 100%;
+    /* Allow full width on mobile */
+    max-width: 400px;
+    /* Limit max width */
 }
 
 .left-part img {
-    width: 30rem;
-    animation: float 5s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-        /* Adjust how far up it moves */
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+    width: 100%;
+    /* Make the image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
 }
 
 .right-part {
+    margin-top: 20px;
+    /* Space between image and text */
+    width: 100%;
+    /* Full width */
+    max-width: 500px;
+    /* Limit max width for text */
     display: flex;
+    /* Flex to center content */
     justify-content: center;
-    align-items: center;
-    width: 70vw;
+    /* Center text horizontally */
 }
 
-.right-part h1 {
-    font-family: "PT Sans", sans-serif;
-    font-weight: 700;
-    font-size: 65px;
-    color: white;
-}
-
-.typewriter-text {
-    font-family: 'Courier', monospace;
-    /* Monospace font for typewriter effect */
-    font-size: 2rem;
-    /* Adjust font size as needed */
-    white-space: nowrap;
-    /* Keep text on a single line */
+h1 {
+    font-size: 24px;
+    /* Set a base font size */
+    line-height: 1.4;
+    /* Line height for better readability */
     overflow: hidden;
-    /* Hide overflowing text */
-    display: inline-block;
+    /* Prevent overflow during typing */
+    white-space: nowrap;
+    /* Prevent wrapping */
 }
 
-.blinking-cursor {
-    border-right: 2px solid black;
-    display: inline;
-    animation: blink 0.75s step-end infinite;
-}
-
-@keyframes blink {
-
-    from,
-    to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: black;
-    }
-}
-
-/* Media Queries for Phones (max-width: 480px) */
-@media (max-width: 480px) {
+@media (min-width: 768px) {
     .hero-container {
-        flex-direction: column;
-        /* Stack items vertically */
-        align-items: center;
-        padding: 20px;
-        text-align: center;
+        flex-direction: row;
+        /* Change to row on tablets and above */
+        justify-content: space-between;
+        /* Space items out */
+        padding: 40px;
+        /* Adjust padding for larger screens */
     }
 
-    .left-part img {
-        width: 100%;
-        /* Reduce the size of the logo on smaller screens */
-        margin-bottom: 20px;
-        /* Add space between the logo and text */
+    .left-part {
+        max-width: 50%;
+        /* Set width for larger screens */
     }
 
-    .right-part h1 {
-        font-size: 2rem;
-        /* Smaller font size for phones */
-        text-align: center;
-        /* Center the text */
-        line-height: 1.3;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        /* Stack the logo and text vertically */
-        align-items: center;
-        /* Center everything */
-        padding: 30px;
-        text-align: center;
+    .right-part {
+        margin-top: 0;
+        color: white;
+        font-weight: 700;
+        font-family: "PT Sans", sans-serif;
+        /* Remove margin on larger screens */
     }
 
-    .left-part img {
-        width: 60%;
-        /* Adjust logo size for tablets */
-        margin-bottom: 20px;
-        /* Add space between the logo and text */
-    }
-
-    .right-part h1 {
-        font-size: 2.5rem;
-        /* Slightly smaller text */
-        text-align: center;
-        /* Center the heading */
+    h1 {
+        font-size: 36px;
+        /* Increase font size on larger screens */
     }
 }

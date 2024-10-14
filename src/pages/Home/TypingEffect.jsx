@@ -1,40 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import './HeroSection.css'; // Keep the same CSS
+import React, { useEffect, useState } from 'react';
 
-const TypingEffect = ({ phrases }) => {  // Receive phrases as props
-    const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-    const [displayedText, setDisplayedText] = useState('');
-    const [isDeleting, setIsDeleting] = useState(false);
-    const [speed, setSpeed] = useState(150); // Typing speed
+const TypingEffect = ({ phrases }) => {
+    const [index, setIndex] = useState(0);
+    const [currentPhrase, setCurrentPhrase] = useState('');
 
     useEffect(() => {
-        const currentPhrase = phrases[currentPhraseIndex];
-        let timeout;
+        const phrase = phrases[index];
+        let charIndex = 0;
 
-        if (isDeleting) {
-            timeout = setTimeout(() => {
-                setDisplayedText(currentPhrase.substring(0, displayedText.length - 1));
-                if (displayedText === '') {
-                    setIsDeleting(false);
-                    setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-                }
-            }, speed);
-        } else {
-            timeout = setTimeout(() => {
-                setDisplayedText(currentPhrase.substring(0, displayedText.length + 1));
-                if (displayedText === currentPhrase) {
-                    setIsDeleting(true);
-                    setSpeed(200); // Speed for deletion
-                }
-            }, speed);
-        }
+        const typingInterval = setInterval(() => {
+            setCurrentPhrase(phrase.substring(0, charIndex + 1));
+            charIndex++;
 
-        return () => clearTimeout(timeout);
-    }, [displayedText, isDeleting, currentPhraseIndex, phrases, speed]);
+            if (charIndex === phrase.length) {
+                clearInterval(typingInterval);
+                setTimeout(() => {
+                    setIndex((prev) => (prev + 1) % phrases.length); // Loop through phrases
+                    setCurrentPhrase(''); // Reset for the next phrase
+                }, 2000); // Pause before starting the next phrase
+            }
+        }, 100); // Typing speed
 
-    return (
-        <span className="typewriter-text" style={{ fontSize: "60px" }}>{displayedText}</span>
-    );
+        return () => clearInterval(typingInterval); // Cleanup interval on component unmount
+    }, [index, phrases]);
+
+    return <span>{currentPhrase}</span>;
 };
 
 export default TypingEffect;

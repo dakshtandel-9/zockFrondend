@@ -1,6 +1,7 @@
 import React from 'react';
-import './HeroSection.css';
-import TypingEffect from './TypingEffect'; // Import TypingEffect component
+import './HeroSection.css'; // Importing the CSS file
+import TypingEffect from './TypingEffect'; // Importing the TypingEffect component
+import { useMediaQuery } from 'react-responsive';
 
 function HeroSection() {
     const phrases = [
@@ -8,21 +9,28 @@ function HeroSection() {
         "Graphic Designing",
         "2D Animation",
         "Branding",
-        "Management",
-        "Web Softwares ",
+        "Web Softwares",
     ];
 
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+
     return (
-        <div className='hero-container'>
-            <div className='left-part'>
-                <img src="https://test.sknd.in/wp-content/uploads/2024/10/logo-footer.png" alt="" />
-            </div>
-            <div className='right-part'>
-                <h1 className='ps-5'>An Agency That
-                    Specialised In <br />
-                    <TypingEffect phrases={phrases} /> {/* Pass phrases as props */}
-                </h1>
-            </div>
+        <div style={{ background: "radial-gradient(circle, #296ceb, #2556d9)", paddingTop: "100px", height: "100vh" }}>
+            <div className='hero-container'>
+                <div className='left-part'>
+                    <img src="https://test.sknd.in/wp-content/uploads/2024/10/logo-footer.png" alt="Logo" />
+                </div>
+                <div className='right-part'>
+                    {isMobile ? (<h1>
+                        An Agency That Specialises In <br />
+                        <TypingEffect phrases={phrases} />
+                    </h1>) : (<h1 style={{ fontSize: "3rem" }}>
+                        An Agency That<br /> Specialises In <br />
+                        <TypingEffect phrases={phrases} />
+                    </h1>)}
+
+                </div>
+            </div >
         </div>
     );
 }
