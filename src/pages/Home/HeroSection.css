@@ -96,3 +96,80 @@ h1 {
         /* Increase font size on larger screens */
     }
 }
+
+.floating-img {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* Adjust how far up it moves */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bg-img {
+    position: absolute;
+    top: 452px;
+    right: 100px;
+}
+
+.bg-img-2 {
+    position: absolute;
+    top: 300px;
+    right: 13px;
+    width: 82px;
+}
+
+.hover-image {
+    width: 300px;
+    /* Adjust size as needed */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.hover-image:hover {
+    transform: translateX(10px);
+    /* Move right by 10 pixels */
+}
+
+.hover-image-2 {
+    /* Adjust size as needed */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.hover-image-2:hover {
+    transform: translateY(10px);
+    /* Move right by 10 pixels */
+}
+
+@media (max-width: 768px) {
+    .bg-img {
+        top: 450px;
+        right: 450px;
+    }
+
+    .hover-image {
+        width: 200px;
+    }
+}
+
+@media (max-width: 460px) {
+    .bg-img {
+        top: 560px;
+        right: 230px;
+    }
+
+    .hover-image {
+        width: 200px;
+    }
+}
