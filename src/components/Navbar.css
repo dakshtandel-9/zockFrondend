@@ -1,0 +1,100 @@
+.logo {
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.nav-link a {
+    font-weight: 300;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(84, 84, 84);
+}
+
+.nav-link a:hover {
+    color: black;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    left: 0;
+    right: 0;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.menu-mobile {
+    position: fixed;
+    top: 20px;
+    z-index: 1000;
+    background-color: white;
+    right: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon-transition {
+    transition: transform 0.3s ease;
+    /* Smooth transition for icon */
+}
+
+.menu-list {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    /* Hidden off-screen */
+    background: #523ea9b9;
+    height: 100vh;
+    width: 300px;
+    /* Width of the menu */
+    transition: right 1s ease;
+    /* Smooth transition */
+    box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.2);
+    /* Optional shadow for effect */
+    z-index: 999;
+    /* Make sure it’s above other content */
+    display: flex;
+    /* Center the content */
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-list ul {
+    list-style: none;
+    /* Remove bullets */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margin */
+}
+
+.menu-list a {
+    display: block;
+    /* Stack links vertically */
+    color: white;
+    /* Change text color */
+    text-decoration: none;
+    padding: 15px 20px;
+    /* Add padding for links */
+    font-size: 24px;
+    /* Font size for links */
+    transition: background 0.3s;
+    /* Background transition */
+}
+
+.menu-list a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    /* Light background on hover */
+}
+
+.menu-list.show {
+    right: 0;
+    /* Slide in the menu */
+}
