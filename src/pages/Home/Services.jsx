@@ -38,7 +38,10 @@ function Services() {
                                 <p style={{ fontWeight: 700 }}><ArrowRightAltIcon />Startup websites</p>
                                 <p style={{ fontWeight: 700 }}><ArrowRightAltIcon />Web applications development</p>
                                 <p style={{ fontWeight: 700 }}><ArrowRightAltIcon />Wordpress development</p>
-                            </div>)
+                                < button className="btn shadow-lg pe-5 ps-5" style={{ color: "blue", fontWeight: "700", borderRadius: "50px", padding: "15px" }}>Read more</button>
+                            </div>
+                            )
+
                         )}
 
                         <div className={activeBox == 2 ? "box-color" : ""} onClick={() => toggleDropdown(2)}>DESIGN SERVICES</div>
@@ -52,6 +55,7 @@ function Services() {
                                     <p style={{ fontWeight: 700 }}><ArrowRightAltIcon />Logo design</p>
                                     p   <p style={{ fontWeight: 700 }}><ArrowRightAltIcon />Brand design</p>
                                     <p style={{ fontWeight: 700 }}><ArrowRightAltIcon />Banner ad design</p>
+                                    < button className="btn shadow-lg pe-5 ps-5" style={{ color: "blue", fontWeight: "700", borderRadius: "50px", padding: "15px" }}>Read more</button>
                                 </div>)
                             )
                         )}
@@ -65,7 +69,9 @@ function Services() {
                                     <p style={{ fontWeight: 700 }}><ArrowRightAltIcon />Content marketing</p>
                                     <p style={{ fontWeight: 700 }}><ArrowRightAltIcon />PPC services</p>
                                     <p style={{ fontWeight: 700 }}><ArrowRightAltIcon />Social media marketing services</p>
-                                </div>)
+                                    < button className="btn shadow-lg pe-5 ps-5" style={{ color: "blue", fontWeight: "700", borderRadius: "50px", padding: "15px" }}>Read more</button>
+                                </div>
+                                )
                             )
                         )}
 
@@ -75,6 +81,7 @@ function Services() {
                                 (<div className='service-item'>
                                     <p>WordPress - Woocommerce PHP - AngularJS - Sketch - Figma - Axure RP</p>
                                     <p style={{ fontWeight: 700 }}><ArrowRightAltIcon />Fixed price website</p>
+                                    < button className="btn shadow-lg pe-5 ps-5" style={{ color: "blue", fontWeight: "700", borderRadius: "50px", padding: "15px" }}>Read more</button>
                                 </div>)
                             )
                         )}
@@ -132,7 +139,7 @@ function Services() {
                             <p>WordPress - Woocommerce PHP - AngularJS - Sketch - Figma - Axure RP</p>
                             <div style={{ fontWeight: 700 }}><ArrowRightAltIcon />Fixed price website</div>
                         </div>)}
-                        <button class="btn shadow-lg pe-5 ps-5" style={{ color: "blue", fontWeight: "700", borderRadius: "50px", padding: "15px" }}>Read more</button>
+                        < button className="btn shadow-lg pe-5 ps-5" style={{ color: "blue", fontWeight: "700", borderRadius: "50px", padding: "15px" }}>Read more</button>
 
                         <div>
                             <img src="https://test.sknd.in/wp-content/uploads/2024/10/services-fig-3.png" alt="" className='hover-image' />
@@ -144,7 +151,7 @@ function Services() {
                 </div>
             </div>)
             }
-        </div>
+        </div >
 
     );
 }
