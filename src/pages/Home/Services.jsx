@@ -60,7 +60,7 @@ function Services() {
                             )
                         )}
 
-                        <div className={activeBox == 3 ? "box-color" : ""} onClick={() => toggleDropdown(3)}>DIGITAL MARKETING</div>
+                        <div href="#services" className={activeBox == 3 ? "box-color" : ""} onClick={() => toggleDropdown(3)}>DIGITAL MARKETING</div>
                         {activeBox === 3 && (
                             (
                                 (<div className='service-item'>
